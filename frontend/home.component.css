@@ -1,0 +1,352 @@
+/*Global*/
+
+body,
+html {
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.section-content {
+    margin-bottom: 150px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.section-content h2 {
+    font-size: 9vmin;
+}
+
+.line {
+    width: 150px;
+    height: 4px;
+    background: crimson;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+.section-content h1 {
+    font-size: 29vmin;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+.ctn {
+    padding: 8px 15px;
+    background: #fc036f;
+    border-radius: 30px;
+    color: whitesmoke;
+}
+
+
+/*navbar*/
+
+
+/* include a section where the landing page highlights 3 key features*/
+
+
+/* Reseting */
+
+.container {
+    margin-top: 40px;
+}
+
+.container .row .col-lg-4 {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    padding: 0;
+    margin: 0 !important;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 280px;
+    max-height: 340px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card .card-image {
+    width: 190%;
+    max-height: 340px;
+}
+
+.card .card-image img {
+    width: 130%;
+    max-height: 340px;
+    object-fit: cover;
+}
+
+.card .card-content {
+    position: absolute;
+    bottom: -180px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    min-height: 140px;
+    width: 100%;
+    transition: bottom .4s ease-in;
+    box-shadow: 0 -10px 10px rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card:hover .card-content {
+    bottom: 0px;
+}
+
+.card:hover .card-content h4,
+.card:hover .card-content h5 {
+    transform: translateY(10px);
+    opacity: 1;
+}
+
+.card .card-content h4,
+.card .card-content h5 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    transition: 0.8s;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(-40px);
+    transition-delay: 0.2s;
+}
+
+.card .card-content h5 {
+    transition: 0.5s;
+    font-weight: 200;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.card .card-content .social-icons {
+    list-style: none;
+    padding: 0;
+}
+
+.card .card-content .social-icons li {
+    margin: 10px;
+    transition: 0.5s;
+    transition-delay: calc(0.15s * var(--i));
+    transform: translateY(50px);
+}
+
+.card:hover .card-content .social-icons li {
+    transform: translateY(20px);
+}
+
+.card .card-content .social-icons li a {
+    color: #fff;
+}
+
+.card .card-content .social-icons li a span {
+    font-size: 1.3rem;
+}
+
+@media(max-width: 991.5px) {
+    .container {
+        margin-top: 20px;
+    }
+    .container .row .col-lg-4 {
+        margin: 20px 0px;
+    }
+}
+
+
+/*About section*/
+
+body {
+    background-color: #fff;
+    font-family: 'Karla', sans-serif;
+}
+
+h1>a {
+    text-decoration: none;
+    color: #fff !important;
+}
+
+.intro-section {
+    background-image: url();
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 75px 95px;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    color: #06043a;
+}
+
+@media (max-width: 991px) {
+    .intro-section {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .intro-section {
+        padding: 28px;
+    }
+}
+
+@media (max-width: 575px) {
+    .intro-section {
+        min-height: auto;
+    }
+}
+
+.brand-wrapper .logo {
+    height: 35px;
+}
+
+@media (max-width: 767px) {
+    .brand-wrapper {
+        margin-bottom: 35px;
+    }
+}
+
+.intro-content-wrapper {
+    width: 410px;
+    max-width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.intro-content-wrapper .intro-title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 100px;
+}
+
+.intro-content-wrapper .intro-text {
+    font-size: 19px;
+    line-height: 1.37;
+}
+
+.intro-content-wrapper .btn-read-more {
+    background-color: #fff;
+    padding: 13px 30px;
+    border-radius: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+.intro-content-wrapper .btn-read-more:hover {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+    .intro-section-footer {
+        margin-top: 35px;
+    }
+}
+
+.intro-section-footer .footer-nav a {
+    font-size: 20px;
+    font-weight: bold;
+    color: inherit;
+}
+
+@media (max-width: 767px) {
+    .intro-section-footer .footer-nav a {
+        font-size: 14px;
+    }
+}
+
+.intro-section-footer .footer-nav a+a {
+    margin-left: 30px;
+}
+
+.form-section {
+    display: --webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+@media (max-width: 767px) {
+    .form-section {
+        padding: 35px;
+    }
+}
+
+.photo {
+    width: 300px;
+    max-width: 100%;
+}
+
+@media (max-width: 575px) {
+    .photo {
+        width: 100%;
+    }
+}
+
+.photo .form-control {
+    border: 0;
+    border-bottom: 1px solid #e7e7e7;
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 15px 10px;
+    margin-bottom: 7px;
+}
+
+.photo .form-control::-webkit-input-placeholder {
+    color: #b0adad;
+}
+
+.photo .form-control::-moz-placeholder {
+    color: #b0adad;
+}
+
+.photo .form-control:-ms-input-placeholder {
+    color: #b0adad;
+}
+
+.photo .form-control::-ms-input-placeholder {
+    color: #b0adad;
+}
+
+.photo .form-control::placeholder {
+    color: #b0adad;
+}
+
+
+/*optional task demo video*/
+
+.video {
+    width: 1500px;
+    height: 725px;
+}
