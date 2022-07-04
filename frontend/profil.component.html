@@ -1,0 +1,87 @@
+<div class="px-0 bg-light">
+    <div class="d-flex">
+        <div class="d-flex align-items-center " id="navbar"> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-items" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation"> <span class="fas fa-bars"></span> </button> <a class="text-decoration-none fs14 ps-2"
+                href="#">IDYLLIC<span class="fs13 pe-2"></span></a> </div>
+        <div id="navbar2" class="d-flex justify-content-end pe-4"> <span class="far fa-user-circle "></span> </div>
+    </div>
+    <div class="d-md-flex">
+        <ul id="navbar-items" class="p-0">
+            <li> <span class="fas fa-th-list"></span> <span class="ps-3 name">Dashboard</span> </li>
+            <li> <span class="fas fa-chart-line"></span> <span class="ps-3 name">TRANSACTIONS</span> </li>
+            <li> <span class="fas fa-suitcase-rolling"></span> <span class="ps-3 name">frauds</span> </li>
+            <li> <span class="fas fa-calendar-alt"></span> <span class="ps-3 name">account</span> </li>
+            <li> <span class="fas fa-comment-alt"></span> <span class="ps-3 name">reqests</span> </li>
+            <li> <span class="fas fa-store-alt"></span> <span class="ps-3 name">merchants</span> </li>
+            <li> <span class="fas fa-clipboard-check" (click)="logout()"></span> <span class="ps-3 name">log out</span> </li>
+        </ul>
+        <div id="topnavbar">
+            <div class="topnav mb-3">
+                <div class="d-flex px-1"> <a href="#home" class="active">merchants</a> <a href="#news">users</a> <a href="#contact">company<span class="px-1">&</span>mid</a> <a href="#contact">account</a> </div>
+            </div>
+            <div class="d-flex align-items-center mb-3 px-md-3 px-2"> <span class="text-uppercase fs13 fw-bolder pe-3">search<span class="ps-1">by</span></span>
+                <form class="example d-flex align-items-center"> <input type="text" placeholder="Type in Company Name Or Mid id" name="search"> <button type="submit"><i class="fa fa-search"></i></button> </form>
+            </div>
+            <div class="table-responsive px-2">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th scope="col">#<span></span></th>
+                            <th scope="col">reference</th>
+                            <th scope="col">price</th>
+                            <th scope="col">Qte<span class="ps-1"></span></th>
+                            <th scope="col">desciption</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let p of listproduct let index=index">
+                            <th scope="row">{{index+1}}</th>
+                            <td>{{p.reference}}</td>
+                            <td>{{p.price}}</td>
+                            <td>{{p.quantity}}</td>
+                            <td>{{p.description}}</td>
+                            <td>{{p._id}}</td>
+                            <td><button type="button" class="btn btn-danger" (click)="deleteproduct(p._id)">Delete</button> </td>
+                            <button class="btn btn-info" [routerLink]="['/detailproduct', p._id]">info product</button>
+                            <td><button type="button" class="btn btn-primary" data-backdrop="false" (click)="open(content,p)">update</button> </td>
+                    </tbody>
+                </table>
+                <ng-template #content let-modal>
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+                        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form [formGroup]="form">
+                            <div class="formGroup">
+                                <label>Reference </label>
+                                <input type="text" formControlName="reference" class="form-control"> </div>
+                            <div class="formGroup">
+                                <label>description</label>
+                                <input type="text" formControlName="description" class="form-control"> </div>
+                            <div class="formGroup">
+                                <label>Price </label>
+                                <input type="text" formControlName="price" class="form-control"> </div>
+                            <div class="formGroup">
+                                <label>Quantity </label>
+                                <input type="text" formControlName="quantity" class="form-control"> </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button " class="btn btn-outline-dark " (click)="updateproduct();modal.close( 'Save click') ">Save</button>
+                    </div>
+                </ng-template>
+
+
+                <hr>
+
+                <pre>{{ closeResult }}</pre>
+            </div>
+            <div class="d-flex align-items-center justify-content-between px-3 mt-3 ">
+                <div class="bg-bdark fs13 "> <span>Page</span> <input class="input-10 text-center " type="text " value="1 "> <span><span class="px-1 ">of</span>1</span>
+                </div>
+                <div class="d-flex justify-content-end bg-bdark fs13 "> <span class="pe-1 ">Show</span> <input class="input-10 " type="number " value="25 "> <span class="ps-2 "><span class="pe-2 ">/</span>Page</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
