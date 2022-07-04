@@ -1,0 +1,66 @@
+<body class="bg-gradient-primary">
+
+    <div class="container">
+
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+
+            <div class="col-xl-10 col-lg-12 col-md-9">
+
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image">
+                                <img src="https://5.imimg.com/data5/NR/PR/MY-39722197/organic-grains-500x500.jpg"> </div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-white-900 mb-4">Add your product!</h1>
+                                    </div>
+                                    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                                        <div class="form-group">
+
+                                            <label for="reference">reference</label>
+                                            <input type="text" formControlName="reference" class=" form-control" id="exampleInputreference" aria-describedby="referenceHelp" placeholder="Enter reference ">
+
+                                        </div>
+                                        <div class="form-group">
+
+                                            <label for="reference">description</label>
+                                            <input type="text" formControlName="description" class="form-control" id="exampleInputdescription" aria-describedby="desciptionHelp" placeholder="Enter description">
+
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="exampleInputprice">price</label>
+                                            <input type=" text" formControlName="price" class=" form-control" id="exampleInputprice" placeholder="price">
+                                        </div>
+                                        <div class="form-group ">
+                                            <label for="exampleInputquantity">quantity</label>
+                                            <input type="text" formControlName="quantity" class="form-control" id="exampleInputquantiter" placeholder="quantity">
+
+                                        </div>
+
+
+                                        <div class="col-sm-6 mb-3 ">
+                                            <input type="file" (change)="onFileChange($event)" name="photos" multiple class="form-control form-control-user" placeholder="file">
+                                        </div>
+                                        <button type=" submit " class="btn btn-primary ">add the Product </button>
+                                    </form>
+                                    <hr>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
