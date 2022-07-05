@@ -1,4 +1,15 @@
-            Intro section
+Build your portfolio project (Week 3): Project Landing Page
+           
+ *The HTML file of the landing page:
+  https://github.com/ZidiEya/IDYLLIC/blob/main/frontend/home/home.component.html
+  
+  *The CSS file of the landing page:
+  https://github.com/ZidiEya/IDYLLIC/blob/main/frontend/home/home.component.css
+         
+     
+     
+     
+     Intro section
 ![Screenshot_1](https://user-images.githubusercontent.com/91125384/177367683-23bfa189-90a2-4564-ae14-04f4ad01710b.png)
            
            Feature Section
