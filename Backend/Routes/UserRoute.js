@@ -4,7 +4,7 @@ const passport = require('passport')
 require('../Middelwares/passport_authentification').passport
 const uploadImage = require('../Middelwares/uploadImage')
 
-
+// router file of the user
 
 Router.post("/registradmin", uploadImage.single('photo'), authcontroller.registreAdmin);
 Router.post("/registrcustomer", authcontroller.registerCustomer);
