@@ -1,6 +1,6 @@
 const Router = require('express').Router()
 const subcategorycontroller = require('../Controllers/subCategorycontroller')
-
+// routes for the subcategory
 Router.post('/createsubcategory', subcategorycontroller.createsubCategory)
 Router.get('/getAllsubcategory', subcategorycontroller.getAllsubCategory)
 Router.get('/getsubcategoryById/:id', subcategorycontroller.getsubcategoryById)
