@@ -4,7 +4,6 @@ const Category = require("../Models/Category");
 //   create product //
 createproduct = async(req, res) => {
     try {
-	//   req.body["picture"] = req.file.filename;
 	req.body['gallery'] =
 	    req.files.length <= 0 ? [] :
 	    req.files.map(function(file) {
@@ -12,10 +11,6 @@ createproduct = async(req, res) => {
 	    })
 	const product = new Product(req.body);
 	await product.save();
-	//push products in subcategory
-	//await SubCategory.findByIdAndUpdate(req.body.subcategory, {
-	//$push: { products: product },
-	//  });
 	res.status(201).json({ message: "product created", data: product });
     } catch (error) {
 	res.status(406).json({ message: "error is " + error.message });
