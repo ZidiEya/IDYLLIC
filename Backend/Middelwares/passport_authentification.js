@@ -3,7 +3,7 @@ const passport = require("passport");
 const SECRET = process.env.APP_SECRET;
 const User = require("../Models/User");
 
-//pour choisir format de token
+// to choose the format of  token
 var options = {
     jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
     secretOrKey: SECRET,
@@ -17,7 +17,6 @@ passport.use(
 		throw new error("User not found");
 	    }
 	    done(null, user);
-	    // done.status(200).json({data:user})
 	} catch (error) {
 	    done(null, error.message);
 	}
