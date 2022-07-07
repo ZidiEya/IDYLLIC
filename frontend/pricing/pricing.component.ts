@@ -1,3 +1,4 @@
+// companent of pricing
 import { Component, OnInit } from '@angular/core';
 
 @Component({
