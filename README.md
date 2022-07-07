@@ -8,20 +8,34 @@
            to consumers in order to make products more affordable. the project was inspired from Ebay as 
            ecommerce website that facilitates consumer-to-consumer and business-to-consumer sales through its website .
            💡Linkedin: https://www.linkedin.com/in/eya-zidi-b5b985221/
+           💡 Link to the blog of the project - https://medium.com/@3805/idyllic-a234c258ef36
+         - https://www.linkedin.com/posts/eya-zidi-b5b985221_idyllic-activity-6950601445603737600-FOpF?utm_source=linkedin_share&utm_medium=member_desktop_web
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-     Contributing:
+     Contributing: 
      
        this project was challenging for me to learn the MEAN stack and to finalize the end of 
        the foundation year of Holberton school so I choose to work on my own
 
   
 --------------------------------------------------------------------------------------------------------------------------------------------------------- 
-     Technologies
+     Technologies 
      
       * MongoDB document database
       * Express Node.js web framework
       * Node(js) the premier JavaScript web server
       * Angular - a client-side JavaScript framework
+      
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+To do list:
+ 
+
+    - Adding a list of the products
+    - adding profile interface where the vendor can update or remove his product
+    - Adding a page that allow the vendor to add his products
+    - Adding login page that allow the vendor to sign in to his profile
+    - Adding register where the vendor can create an account 
+      
+      
 -------------------------------------------------------------------------------------------------------------------------------------------------------
        These are the following features  of IDYLLIC:
        * Add product: where the vendor can add his products to the website
@@ -36,6 +50,8 @@
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------              
        
      Installation
+      - clone this repo : https://github.com/ZidiEya/IDYLLIC.git
+      - cd IDYLLIC 
       - npm i to install all the dependencies:
         *multer
         *bcrypt
@@ -46,16 +62,6 @@
         *nodemon
 ![Screenshot_4](https://user-images.githubusercontent.com/91125384/177428382-887008db-6674-4a34-abef-2c9dd83760b2.png)
        
-       
-      
-      
- ----------------------------------------------------------------------------------------------------------------------------------------------------------
-    Usage:
-     
-      - start the frontend of the  application with ng serve
-      - start the backend of the application with npm start
-
- -----------------------------------------------------------------------------------------------------------------------------------------------------------
      ENV
      Assuming the above dependencies have been installed, the easiest way to set 
      the environment for this project/server is to use a .env file.
@@ -68,15 +74,27 @@
     APP_DOMAIN = http://localhost:3500/
     APP_PASS = 11874587Rb
     APP_SECRET=FormNode
+      
+      
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Usage: 
+     
+      - start the frontend of the  application with ng serve
+      - start the backend of the application with npm start
 
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    
+Front-End
 
-  
-
-Front-End 
 * Angular components handling routing
 * API calls to manipulate database
+  
+Back-end 
+
+* Models : where there are the APIS
+* Controllers where there is the functions of the app
+* routes : the touters of the web app
+* server.js: the server of web app
 
 
 
