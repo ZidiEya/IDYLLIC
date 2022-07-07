@@ -9,7 +9,8 @@
            ecommerce website that facilitates consumer-to-consumer and business-to-consumer sales through its website .
            💡Linkedin: https://www.linkedin.com/in/eya-zidi-b5b985221/
            💡 Link to the blog of the project - https://medium.com/@3805/idyllic-a234c258ef36
-         - https://www.linkedin.com/posts/eya-zidi-b5b985221_idyllic-activity-6950601445603737600-FOpF?utm_source=linkedin_share&utm_medium=member_desktop_web
+           💡 link  to the blog https://www.linkedin.com/posts/eya-zidi-b5b985221_idyllic-activity-6950601445603737600-FOpF?utm_source=linkedin_share&utm_medium=member_desktop_web
+           💡Link to the website https://zidieya.github.io/IDYLLIC/
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
      Contributing: 
      
