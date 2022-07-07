@@ -1,12 +1,11 @@
 const multer = require("multer");
-
+// func to uplead  images
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
 	cb(null, "./storages");
     },
     filename: (req, file, cb) => {
 
-	/*  cb(null, file.originalname); */
 	cb(
 	    null,
 	    new Date().toISOString().replace(/:/g, "-") + file.originalname
