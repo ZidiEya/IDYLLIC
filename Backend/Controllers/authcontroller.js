@@ -20,7 +20,7 @@ var transporter = nodemailer.createTransport({
 const DOMAIN = process.env.APP_DOMAIN;
 const SECRET = process.env.APP_SECRET;
 var RefreshTokens = [];
-
+// register of admin
 registreAdmin = async(req, res) => {
     try {
 	const password = bcrypt.hashSync(req.body.password, 10);
@@ -40,6 +40,7 @@ registreAdmin = async(req, res) => {
 	res.status(406).json({ message: "error is " + error.message });
     }
 };
+// register of customer
 registerCustomer = async(req, res) => {
     try {
 	const password = bcrypt.hashSync(req.body.password, 10);
@@ -90,6 +91,7 @@ verifyEmail = async(req, res) => {
 	res.sendFile(join(__dirname, "../Templates/errors.html"));
     }
 };
+// login function
 login = async(req, res) => {
     try {
 	// verifcation et compare password //
@@ -146,7 +148,6 @@ login = async(req, res) => {
 refreshToken = async(req, res) => {
     try {
 	var refreshToken = req.body.refreshToken;
-	//    console.log(RefreshTokens)
 	if (refreshToken in RefreshTokens) {
 	    const token = jwt.sign({
 		user: req.user,
@@ -172,6 +173,7 @@ refreshToken = async(req, res) => {
 	res.status(404).json({ message: "error is" + error.message });
     }
 };
+// profile function
 profile = async(req, res) => {
     try {
 	const user = req.user;
@@ -180,6 +182,7 @@ profile = async(req, res) => {
 	res.status(406).json({ message: "error is" + error.message });
     }
 };
+// update profile functions
 updateProfile = async(req, res) => {
     try {
 	await Customer.updateOne({ _id: req.user._id }, req.body);
@@ -188,11 +191,11 @@ updateProfile = async(req, res) => {
 	res.status(406).json({ message: "error is" + error.message });
     }
 };
+// function to reset the password
 forgotpassword = async(req, res) => {
     try {
 	const email = req.body.email;
 	const user = await User.findOne({ email });
-	// console.log(user)
 	if (!user) {
 	    return res
 	        .status(406)
@@ -211,7 +214,6 @@ forgotpassword = async(req, res) => {
 		message: "Token created chek your email",
 		status: 200,
 	    });
-	//console.log(token)
 	transporter.sendMail({
 	    to: user.email,
 	    subject: "welcome" + " " + user.fullname,
@@ -225,6 +227,7 @@ forgotpassword = async(req, res) => {
 	res.status(406).json({ message: "error is" + error.message });
     }
 };
+// reset password
 resetpassword = async(req, res) => {
     try {
 	const resetPasswordToken = req.params.token;
@@ -244,7 +247,6 @@ resetpassword = async(req, res) => {
 		});
 	    });
 	}
-	//console.log(user);
     } catch (error) {
 	res.status(404).json({ message: "error is" + error.message });
     }
