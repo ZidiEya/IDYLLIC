@@ -1,5 +1,6 @@
 const Order = require("../Models/Order");
 const Customer = require("../Models/Customer");
+// create Order
 createOrder = async (req, res) => {
     try {
 	const neworder = new Order(req.body);
@@ -12,6 +13,7 @@ createOrder = async (req, res) => {
 	res.status(406).json({ message: "error is " + error.message });
     }
 };
+// func to get order by Customer
 orderBycustomer = async (req, res) => {
     try {
 	const orders = req.user.orders
@@ -23,10 +25,9 @@ orderBycustomer = async (req, res) => {
 	res.status(406).json({ message: "error is " + error.message });
     }
 };
+//  func to delete order
 delleteorder=async(req,res)=>{
     try {
-	  /* const order=req.params.id
-	     console.log(order) */
 	await Customer.findByIdAndUpdate(req.user._id, {
 	    $pull: { orders: req.params.id }, });
 	await Order.deleteOne({ _id: req.params.id });
