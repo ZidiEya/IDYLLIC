@@ -1,6 +1,6 @@
 const Category = require("../Models/Category");
 const SubCategory = require("../Models/SubCategory");
-
+// create category
 createCategory = async (req, res) => {
     try {
 	const category = new Category(req.body);
@@ -10,7 +10,7 @@ createCategory = async (req, res) => {
 	res.status(406).json({ message: "error is " + error.message });
     }
 };
-
+// function to list categories
 getAllCategory = async (req, res) => {
     try {
 	const categories = await Category.find({}).populate("subcategories");
@@ -22,6 +22,7 @@ getAllCategory = async (req, res) => {
 	res.status(406).json({ message: "error is " + error.message });
     }
 };
+// function to get by id the categories
 getcategoryById = async (req, res) => {
     try {
 	const category = await Category.findById({
@@ -32,6 +33,7 @@ getcategoryById = async (req, res) => {
 	res.status(406).json({ message: "error is " + error.message });
     }
 };
+// function to get by name
 getcategoryByName = async (req, res) => {
     try {
 	const category = await Category.find({
@@ -45,6 +47,7 @@ getcategoryByName = async (req, res) => {
 	res.status(406).json({ message: "error is " + error.message });
     }
 };
+// func to update
 updateCategory = async (req, res) => {
     try {
 	await Category.updateOne({ _id: req.params.id }, req.body);
@@ -53,6 +56,7 @@ updateCategory = async (req, res) => {
 	res.status(406).json({ message: "error is " + error.message });
     }
 };
+// function to delete
 deleteCategory = async (req, res) => {
     try {
 	await Category.deleteOne({ _id: req.params.id });
