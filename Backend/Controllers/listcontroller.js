@@ -1,19 +1,12 @@
 const list = require("../Models/list");
 const SubCategory = require("../Models/SubCategory");
 const Category = require("../Models/Category");
-//   create product //
+//   create product 
 createlist = async(req, res) => {
     try {
-	//req.body["picture"] = req.file.filename;
-	// req.body['gallery']=
-	// req.files.length <= 0 ?
-	//     [] :
-	//     req.files.map(function(file) {
-	//         return { name: file.filename, description: 'add prod' }
-	//     })
+	
 	const list = new list(req.body);
 	await list.save();
-	//push products in subcategory
 	await SubCategory.findByIdAndUpdate(req.body.subcategory, {
 	    $push: { list: list },
 	});
