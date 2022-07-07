@@ -2,7 +2,7 @@ const Router = require('express').Router()
 const productController = require('../Controllers/productcontroller')
 const uploadImage = require('../Middelwares/uploadImage')
 //Routes for product
-// npm Router.post('/createproduct', productController.createproduct)
+
 Router.post('/createproduct', uploadImage.array('photos'), productController.createproduct)
 Router.get('/getAllproduct', productController.getAllproduct)
 Router.get('/getproductByReference', productController.getproductByReference)
