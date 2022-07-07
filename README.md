@@ -97,6 +97,9 @@ Back-end
 * routes : the touters of the web app
 * server.js: the server of web app
 
+![Capture d’écran du 2022-07-07 03-46-19](https://user-images.githubusercontent.com/91125384/177681425-9daee4f1-6aaf-463b-a12a-118e1f81b99e.png)
+![Capture d’écran du 2022-07-07 03-51-27](https://user-images.githubusercontent.com/91125384/177681501-d92b86b8-cfa3-42bb-a2a3-ac4e64204489.png)
+![Capture d’écran du 2022-07-07 03-46-59](https://user-images.githubusercontent.com/91125384/177681739-b7058277-064c-44a8-b726-ddc90002bbb7.png)
 
 
        
