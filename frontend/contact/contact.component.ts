@@ -1,3 +1,4 @@
+//  component of contact
 import { Component, OnInit } from '@angular/core';
 
 @Component({
