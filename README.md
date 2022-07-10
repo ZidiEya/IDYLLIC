@@ -108,7 +108,7 @@
 
 ⭐ Controllers where there is the functions of the app
 
-⭐ routes : the touters of the web app
+⭐ routes : the routers of the web app
 
 ⭐ server.js: the server of web app
 
